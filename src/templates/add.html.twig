@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<h1 >Congratulations! </h1>
+<p >The url {{ url }} can now be shortened via
+    <a href="/{{ url_slug }}">http://{{ app.request.host }}/{{ url_slug }}</a>
+    . Feel free to use the service again!
+</p>
+{% endblock %}

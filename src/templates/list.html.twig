@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<table >
+    <tr >
+        <th >Short URL</th>
+        <th >Full URL</th>
+    </tr>
+    {% for url_slug, url in list %}
+    <tr >
+        <td ><a href="/{{ url_slug }}">http://{{ app.request.host }}/{{ url_slug }}</td>
+        <td >{{ url }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

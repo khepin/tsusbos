@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<h1>Welcome to TSUSBOS</h1>
+<h2 >The Simple URL Shortener Based On Silex </h2>
+<p >To add a new url to be shortened, go to a url formed like this:
+    <pre >http://shortener.com/goog?url=http://www.google.com </pre>
+    After this, visiting the url
+    <pre >http://shortener.com/goog</pre>
+    will redirect the user to http://www.google.com .
+</p >
+<p >
+    You can <a href="/view/list">view all available urls on this site here.</a>
+</p>
+{% endblock %}
