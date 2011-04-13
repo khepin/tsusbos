@@ -20,11 +20,11 @@ $app->register(new \Silex\Extension\MonologExtension(), array(
 ));
 
 /** App definition */
-//$app->error(function(Exception $e) use ($app){
-//    if (!in_array($app['request']->server->get('REMOTE_ADDR'), array('127.0.0.1', '::1'))) {
-//        return $app->redirect('/');
-//    }
-//});
+$app->error(function(Exception $e) use ($app){
+    if (!in_array($app['request']->server->get('REMOTE_ADDR'), array('127.0.0.1', '::1'))) {
+        return $app->redirect('/');
+    }
+});
 
 $app->get('/', function() use ($app){
     return $app['twig']->render('index.html.twig');
