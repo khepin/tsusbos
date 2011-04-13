@@ -1,0 +1,5 @@
+[2011-04-14 01:48:40] myapp.INFO: GET /form_configure 
+[2011-04-14 01:48:40] myapp.INFO: GET /easy_excel 
+[2011-04-14 01:48:41] myapp.INFO: GET /split_routing 
+[2011-04-14 01:48:41] myapp.INFO: GET /ajax_forms 
+[2011-04-14 01:48:42] myapp.INFO: GET /ordering 

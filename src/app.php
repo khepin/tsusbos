@@ -14,13 +14,17 @@ $app->register(new Silex\Extension\TwigExtension(), array(
     'twig.class_path' => __DIR__.'/../vendor/Twig/lib',
     'twig.options' => array('cache' => __DIR__.'/../cache'),
 ));
+$app->register(new \Silex\Extension\MonologExtension(), array(
+    'monolog.logfile' => __DIR__.'/../log/tsusbos.log',
+    'monolog.class_path' => __DIR__.'/../vendor/Monolog/src',
+));
 
 /** App definition */
-$app->error(function(Exception $e) use ($app){
-    if (!in_array($app['request']->server->get('REMOTE_ADDR'), array('127.0.0.1', '::1'))) {
-        return $app->redirect('/');
-    }
-});
+//$app->error(function(Exception $e) use ($app){
+//    if (!in_array($app['request']->server->get('REMOTE_ADDR'), array('127.0.0.1', '::1'))) {
+//        return $app->redirect('/');
+//    }
+//});
 
 $app->get('/', function() use ($app){
     return $app['twig']->render('index.html.twig');
