@@ -12,12 +12,14 @@ $app->register(new Khepin\ShortenerExtension(), array('url_file_name'  =>  __DIR
 $app->register(new Silex\Extension\TwigExtension(), array(
     'twig.path' => __DIR__.'/templates',
     'twig.class_path' => __DIR__.'/../vendor/Twig/lib',
-    'twig.options' => array('cache' => __DIR__.'/../cache'),
+//    'twig.options' => array('cache' => __DIR__.'/../cache'),
 ));
-$app->register(new \Silex\Extension\MonologExtension(), array(
-    'monolog.logfile' => __DIR__.'/../log/tsusbos.log',
-    'monolog.class_path' => __DIR__.'/../vendor/Monolog/src',
-));
+$log = fopen(__DIR__.'/../log/tsusbos.log', 'w');
+fclose($log);
+//$app->register(new \Silex\Extension\MonologExtension(), array(
+//    'monolog.logfile' => __DIR__.'/../log/tsusbos.log',
+//    'monolog.class_path' => __DIR__.'/../vendor/Monolog/src',
+//));
 
 /** App definition */
 $app->error(function(Exception $e) use ($app){
