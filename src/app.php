@@ -14,8 +14,6 @@ $app->register(new Silex\Extension\TwigExtension(), array(
     'twig.class_path' => __DIR__.'/../vendor/Twig/lib',
 //    'twig.options' => array('cache' => __DIR__.'/../cache'),
 ));
-$log = fopen(__DIR__.'/../log/tsusbos.log', 'w');
-fclose($log);
 //$app->register(new \Silex\Extension\MonologExtension(), array(
 //    'monolog.logfile' => __DIR__.'/../log/tsusbos.log',
 //    'monolog.class_path' => __DIR__.'/../vendor/Monolog/src',
