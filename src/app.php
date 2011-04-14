@@ -7,7 +7,6 @@ $app = new Silex\Application();
 $app['key'] = 'my_key';
 
 $app['autoloader']->registerNamespaces(array('Khepin' => __DIR__,));
-touch(sys_get_temp_dir().'/urls.ini');
 $app->register(new Khepin\ShortenerExtension(), array('url_file_name'  => sys_get_temp_dir().'/urls.ini'));
 $app->register(new Silex\Extension\TwigExtension(), array(
     'twig.path' => __DIR__.'/templates',
