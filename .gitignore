@@ -1,2 +1,3 @@
 cache/
-log/
+log/tsusbos.log
+resources/urls.ini
