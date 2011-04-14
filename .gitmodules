@@ -1,3 +1,6 @@
 [submodule "vendor/Monolog"]
 	path = vendor/Monolog
 	url = git://github.com/Seldaek/monolog.git
+[submodule "vendor/Twig"]
+	path = vendor/Twig
+	url = git://github.com/fabpot/Twig.git
